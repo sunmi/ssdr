@@ -1,0 +1,141 @@
+/* Base style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* button,
+input {
+    font-family: "Spoqa", sans-serif;
+    font-size: 16px;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    outline: none;
+    box-shadow: none;
+} */
+
+ul,
+li {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+body {
+    font-family: 'Nunito Sans', Arial, Helvetica, Verdana, sans-serif;
+    background-color: #f1f1f1;
+}
+
+
+header ul, footer ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* Header */
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #F5F1EB;
+    height: 100px;
+}
+
+#header .container{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 {
+    width: 30%;
+}
+
+#header h1 a {
+    display: block;
+    line-height: 0;
+}
+
+#header h1 a img {
+    width: 110px;
+    height: auto;
+    /* align-self: start; */
+}
+
+#header nav {
+    width: 70%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.menu>li {
+    padding-left: 102px;
+}
+
+.menu>li>ul {
+    display: none;
+}
+
+/* Main */
+main {
+    padding-top: 100px;
+}
+
+/* Hero */
+#hero {
+    height: 1400px;
+    background-image: url(images/img_hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 80%;
+}
+
+#hero .container {
+
+    
+}
+
+#hero h2 {
+    padding-top: 176px;
+}
+
+
+
+/*-----------IGNORE THIS SECTION UNTIL DISCUSSED IN CLASS-----------*/
+
+/* Desktop only rules. For example, if you have 2 layout areas that are stacked on mobile, but side-by-side on desktop, put your flexbox rules below. */
+
+@media screen and (min-width: 900px){
+/* Put all desktop only rules after this comment and before closing comment */
+
+
+
+
+/* Put all desktop only before this comment and after opening comment */
+}
+
