@@ -35,6 +35,7 @@ li {
 body {
     font-family: 'Nunito Sans', Arial, Helvetica, Verdana, sans-serif;
     background-color: #f1f1f1;
+    color: #222;    
 }
 
 
@@ -47,6 +48,18 @@ header ul, footer ul {
     margin: 0 auto;
 }
 
+section h2 {
+    font-size: 70px;
+    color: #244845;
+}
+
+.description {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-bottom: 40px;
+}
+
 
 /* Header */
 #header {
@@ -56,6 +69,8 @@ header ul, footer ul {
     left: 0;
     background-color: #F5F1EB;
     height: 100px;
+    z-index: 5000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 #header .container{
@@ -103,26 +118,54 @@ header ul, footer ul {
 
 /* Main */
 main {
-    padding-top: 100px;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* Hero */
 #hero {
-    height: 1400px;
-    background-image: url(images/img_hero.jpg);
+    padding-top: 100px;
+    height: 1500px;
+    background-image: url('images/img_hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 80%;
-}
-
-#hero .container {
-
-    
+    background-position: center 90%;
 }
 
 #hero h2 {
-    padding-top: 176px;
+    color: #222;
+    padding: 115px 0 20px;
+    font-size: 70px;
 }
+
+/* About */
+#about {
+    position: relative;
+    top: -380px;
+    left: -10%;
+    width: 120%;
+    height: 1000px;
+    border-radius:130% 130% 0 0;
+    text-align: center;
+    z-index: 1000;
+    background-color: #e9edee;
+}
+
+#about .container {
+    height: 100%;
+    padding-top: 130px;
+    background-image: url('./images/img_aboutus.png');
+    background-size: auto 600px;
+    background-repeat: no-repeat;
+    background-position: 60px bottom;
+}
+
+
+#about .description {
+    padding-top: 108px;
+    text-align: right;
+}
+
 
 
 
