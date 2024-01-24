@@ -49,6 +49,7 @@ header ul, footer ul {
 }
 
 section h2 {
+    padding-bottom: 46px;
     font-size: 70px;
     color: #244845;
 }
@@ -132,6 +133,10 @@ main {
     background-position: center 90%;
 }
 
+#hero .container {
+    max-width: 1100px;
+}
+
 #hero h2 {
     color: #222;
     padding: 115px 0 20px;
@@ -140,11 +145,9 @@ main {
 
 /* About */
 #about {
-    position: relative;
-    top: -380px;
-    left: -10%;
+    margin: -380px 0 0 -10%;
     width: 120%;
-    height: 1000px;
+    height: 900px;
     border-radius:130% 130% 0 0;
     text-align: center;
     z-index: 1000;
@@ -160,13 +163,106 @@ main {
     background-position: 60px bottom;
 }
 
-
 #about .description {
     padding-top: 108px;
+    padding-right: 170px;
     text-align: right;
 }
 
+/* Available Pet */
+#available-pet {
+    width: 100%;
+    background: url('./images/img_bg_dots.png');
+    background-color: #99D3C8;
+    background-repeat: repeat;
+}
 
+#available-pet .container {
+    max-width: 1100px;
+    padding: 162px 0;
+}
+
+#available-pet .description {
+    padding-bottom: 90px;
+}
+
+.pet-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pet-list>li {
+    width: 30%;
+    margin-bottom: 90px;
+}
+
+.pet-pic {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.pet-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+}
+
+.pet-list .info {
+    padding: 0 40px;
+}
+
+.pet-list .name {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: #244845;
+}
+
+.pet-info {
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+.pet-info li {
+    padding-bottom: 8px;
+    margin-left: 20px;
+    list-style: disc;
+    font-size: 20px;
+}
+
+/* Donation */
+#donation {
+    width: 100%;
+    background-color: #F5F1EB;
+}
+
+#donation .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 162px 0;
+    max-width: 1100px;
+}
+
+.donation-img {
+    width: 45%;
+    height: auto;
+    border-radius: 100%;
+}
+
+#donation .text-area {
+    width: 45%;
+    padding-top: 60px;
+}
+
+/* Newletter */
+#newsletter .box{
+    max-width: 1110px;
+    margin: 0 auto;
+    background-color: #F5F1EB;
+    border: 1px solid #222;
+    border-radius: 30%;
+}
 
 
 /*-----------IGNORE THIS SECTION UNTIL DISCUSSED IN CLASS-----------*/
