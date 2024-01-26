@@ -193,13 +193,33 @@ header ul, footer ul {
 }
 
 .menu>li {
-    padding-left: 102px;
+    margin-left: 102px;
+    position: relative;
 }
 
 .menu>li>ul {
     display: none;
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    background-color: #F5F1EB;
+    padding: 40px 20px 20px;
+    font-weight: 400;
 }
 
+.menu>li:hover ul,
+.menu>li:focus ul {
+    display: block;
+}
+
+.menu>li>ul>li {
+    min-width: 160px;
+    padding: 10px 0;
+}
+
+.menu>li>ul>li a:hover {
+    text-decoration: underline;
+}
 
 .menu>li>a {
     position: relative;
@@ -308,6 +328,7 @@ header ul, footer ul {
     margin-bottom: 40px;
     position: relative;
     line-height: 0;
+    text-align: center;
 }
 
 .pet-pic:hover::after,
@@ -328,13 +349,11 @@ header ul, footer ul {
 .pet-pic:hover::before,
 .pet-pic:focus::before,
 .pet-pic:active::before {
+    display: block;
     position:absolute;
-    top: center;
-    left: center;
+    content: 'Jini';
     font-size: 40px;
     color: #fff;
-    content: 'Jini';
-    display: block;
     z-index: 500;
     letter-spacing: 0.1em;
 }
@@ -459,7 +478,7 @@ header ul, footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 220px;
     height: 100px;
     margin-bottom: 20px;
     text-align: center;
