@@ -65,7 +65,9 @@ button:active,
 }
 
 button:hover::after,
-.btn-primary:hover::after {
+.btn-primary:hover::after,
+button:focus::after,
+.btn-primary:focus::after {
     display: block;
     position: absolute;
     bottom:-4px;
@@ -80,9 +82,7 @@ button:hover::after,
 }
 
 button:active::after,
-button:focus::after,
-.btn-primary:active::after,
-.btn-primary:focus::after {
+.btn-primary:active::after{
     bottom: inherit;
     right: inherit;
     top:-4px;
@@ -139,7 +139,7 @@ header ul, footer ul {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -201,11 +201,12 @@ header ul, footer ul {
 }
 
 
-.menu>li>a:hover {
+.menu>li>a {
     position: relative;
 }
 
-.menu>li>a:hover::after {
+.menu>li>a:hover::after,
+.menu>li>a:focus::after {
     position: absolute;
     top: 10px;
     left: 0;
@@ -215,9 +216,9 @@ header ul, footer ul {
     content: '';
     display: block;
     opacity: 40%;
+    z-index: -100
 }
 
-.menu>li>a:focus::after,
 .menu>li>a:active::after {
     opacity: 80%;
     top: 16px;
@@ -301,14 +302,62 @@ header ul, footer ul {
 }
 
 .pet-pic {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
+    position: relative;
+    line-height: 0;
+}
+
+.pet-pic:hover::after,
+.pet-pic:focus::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 40%;
+    border-radius: 50px;
+    z-index: 300;
+}
+
+.pet-pic:hover::before,
+.pet-pic:focus::before,
+.pet-pic:active::before {
+    position:absolute;
+    top: center;
+    left: center;
+    font-size: 40px;
+    color: #fff;
+    content: 'Jini';
+    display: block;
+    z-index: 500;
+    letter-spacing: 0.1em;
+}
+
+.pet-pic:active::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #046B61;
+    opacity: 50%;
+    border-radius: 50px;
+    z-index: 300;
 }
 
 .pet-list img {
     width: 100%;
     height: auto;
     border-radius: 50px;
+    line-height: 0;
 }
 
 .pet-list .info {
@@ -320,6 +369,10 @@ header ul, footer ul {
     font-size: 30px;
     font-weight: 800;
     color: #244845;
+}
+
+.pet-list .name:hover {
+    text-decoration: underline;
 }
 
 .pet-info {
